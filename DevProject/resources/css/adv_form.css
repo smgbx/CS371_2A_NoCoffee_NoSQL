@@ -17,8 +17,14 @@
 }
 .container {
     text-align: center;
-    background-color: aliceblue;
-    width: auto;
+    background-color: rgb(77, 150, 214);
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+    
 }
 .ad-wrapper {   
     text-align: right; 
