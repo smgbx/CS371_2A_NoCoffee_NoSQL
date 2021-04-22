@@ -6,12 +6,13 @@
 </head>
 <body class="container-wrapper">
 <div class="box">
-    <form>
+    <form method="post" action="login.php">
         <div class="user-wrapper">
-            USER ID: <input class="input-box" type="text" placeholder="Enter User ID" ?>
+            USER ID: <input class="input-box" type="text" name="user_id" placeholder="Enter User ID" ?>
         </div>
         <div>
-            <input class="button-wrapper" type="button" value="LOGIN" onclick="document.location='ads.html'">
+            <button class="button-wrapper" type="submit" value="submit" onclick="document.location='ads.html'">
+                Login </button>
         </div>
     </form>
 </div>
