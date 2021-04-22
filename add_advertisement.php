@@ -1,27 +1,71 @@
 <?php
 require_once 'connection.php';
-
-$ad_title=isset($_POST['ad_title'])?$_POST['ad_title']:"";
-$ad_details=isset($_POST['ad_details'])?$_POST['ad_details']:"";
-$date=isset($_POST['date'])?$_POST['date']:"";
-$price=isset($_POST['price'])?$_POST['price']:"";
-$category_id=isset($_POST['category_id'])?$_POST['category_id']:"";
-$user_id=isset($_POST['user_id'])?$_POST['user_id']:"";
-$moderator_id=isset($_POST['moderator_id'])?$_POST['moderator_id']:"";
-$status_id=isset($_POST['status_id'])?$_POST['status_id']:"";
-
-$SQL = "INSERT INTO employees(advtitle, advdetails, advdatetime, price, category_id, user_id, moderator_id, status_id) VALUES(";
-$SQL.="'".$ad_title."', '".$ad_details."', '".$date."', '".$price."', '".$category_id."', '".$user_id."', '".$moderator_id."', '".$status_id."')";
-$result = mysqli_query($connection,$SQL);
-
-if (!$result) //if the query fails
-    die("Database access failed: " . mysqli_error($connection));
-else
-    echo("Connection successful");
-
-$SQL.="'".$ad_title."', '".$ad_details."', '".$date."', '".$price."', '".$category_id."', '".$user_id."', '".$moderator_id."', '".$status_id."')";
-    if($ad_title !=''&& $ad_details !='' && $date !=''&& $price !=''&& $category_id !=''&& $user_id !=''&& $moderator_id !=''&& $status_id !='')
-    {
-    header("Location:record_added_successfully.php");
-    }
+if(!session_id()) session_start();
+$user_id = $_SESSION["user_id"];
 ?>
+
+<html>
+<head>
+    <link href="DevProject/resources/css/adv_form.css" type="text/css" rel="stylesheet">
+  <title>Create Advertisement</title>
+</head>
+<body class="container-wrapper">
+    <div class="container">
+        <div class="ad-wrapper">
+            Welcome <?php echo $user_id ?>
+            <button class="button-logout-wrapper"><a href="logout.php">Logout</a></button>   
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-elements" > 
+            <form method="post" action="submit_new_ad.php">
+                <h1 class="form-title"> Create Advertisement</h1>
+                <p>
+
+                <label class="boxes">
+                    AdvTitle: 
+                </label><br>
+                <input type="varchar" name="ad_title"><br><br>
+
+                <label class="boxes">
+                    AdvDetails: 
+                </label><br>
+                <input type="varchar" name="ad_details"><br><br>
+
+                <label class="boxes">
+                    Category: 
+                </label><br>
+                <select name="category_id">
+                    <option type="varchar" value="CAT">Cars and Trucks</option>
+                    <option type="varchar" value="HOU">Housing</option>
+                    <option type="varchar" value="ELC">Electronics</option>
+                    <option value="CCA">Child Care</option>
+                </select><br><br>
+
+                <label class="boxes">
+                    Price: 
+                </label><br>
+                <input type="decimal(6,2)" name="price"><br><br>
+
+                <label class="boxes">
+                    Moderator: 
+                </label><br>
+                <select name="moderator_id">
+                    <option type="varchar" value="Jsmith">Jessie Smith</option>
+                    <option type="varchar" value="Ajackson">Antonio Jackson</option>
+                    <option type="varchar" value="">None</option>
+                </select>
+                </p>
+
+                <label class="boxes">
+                    Date: <?php echo date("m-d-Y");?>
+                </label><br>
+
+            <div>
+                <input class="button-wrapper2" type="submit" value="SUBMIT">
+            </div>
+            </form>
+            <button class="button-wrapper2"><a href="homepage.php">Back to homepage</a></button>
+    </div>
+</body>
+</html>
