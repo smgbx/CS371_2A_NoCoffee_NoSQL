@@ -29,7 +29,10 @@ body {
     background-color: rgba(7, 81, 110, 0.897);
     padding: 3px 65px;
 }
-
+.button-logout-wrapper {
+    color: rgb(207, 221, 11);
+    background-color: rgba(7, 81, 110, 0.897);
+}
 .table-content {
     font-family: arial, sans-serif;
     width: 39%;
@@ -50,4 +53,9 @@ th{
   
   tr:nth-child(even) {
     background-color: #dddddd;
+  }
+
+  a {
+    color: rgb(207, 221, 11);
+    text-decoration: none;
   }

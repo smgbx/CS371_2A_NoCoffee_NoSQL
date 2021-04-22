@@ -42,7 +42,7 @@ if (isset($_POST['user_id'])) {
                     USER ID: <input class="input-box" type="varchar" name="user_id" placeholder="Enter User ID" ?>
                 </div>
                 <div>
-                    <button class="button-wrapper" type="submit" value="submit">
+                    <button class="button-wrapper" type="submit" value="Login" text="Login">
                         Login </button>
                 </div>
             </form>
