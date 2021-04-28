@@ -43,12 +43,10 @@ if (isset($_POST['user_id'])) {
                 </div>
                 <div>
                     <button class="button-wrapper" type="submit" value="Login" text="Login">
-                        Login </button>
+                        Login </button><br><br>
+                    <div><?php echo $text;?></div>
                 </div>
             </form>
         </div> 
-        <?php
-            echo $text;
-        ?>
     </body>
 </html>

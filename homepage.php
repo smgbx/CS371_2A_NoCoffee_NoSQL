@@ -6,9 +6,6 @@ $user_id = $_SESSION["user_id"];
 
 function displayAds($result)
 {
-
-    echo "<h1>Advertisements</h1>\n";
-
     // Start a table, with column headers
     echo "\n<table>\n<tr>\n" .
         "\n\t<th>Title ID</th>" .
@@ -62,11 +59,11 @@ if (!$result)
                 <button class="button-logout-wrapper"><a href="logout.php">Logout</a></button>
             </div>
             <div class="table-content">
-            <?php
-                // Display the results
-                displayAds($result);
-
-                ?>
+                <h1>Advertisements</h1>
+                    <?php
+                        // Display the results
+                        displayAds($result);
+                    ?>
             </div>
             <div>
                 <input class="button-wrapper" onclick="document.location='add_advertisement.php'" type="button" value="ADD">

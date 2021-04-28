@@ -55,4 +55,15 @@
     padding: 3px 65px;
     /* margin-left: 90px; */
     color: beige;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: beige;
+}
+
+.button-logout-wrapper {
+    color: rgb(207, 221, 11);
+    background-color: rgba(7, 81, 110, 0.897);
 }
