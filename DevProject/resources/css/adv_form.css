@@ -1,6 +1,6 @@
 .container-wrapper{
     background-color: rgba(250, 235, 215, 0.424);
-    background-image: image();
+    /* background-image: image(); */
 }
 .box {
     display: flex;
@@ -17,14 +17,13 @@
 }
 .container {
     text-align: center;
-    background-color: rgb(77, 150, 214);
+    /* background-color: rgb(77, 150, 214); */
     display: block;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
     text-align: center;
-    
 }
 .ad-wrapper {   
     text-align: right; 
@@ -50,9 +49,9 @@
 
 .button-wrapper2 {
     border-radius: 50px;
-    background-color: rgb(7, 81, 110);
+    /* background-color: rgb(7, 81, 110); */
     margin-top: 30px;
-    padding: 3px 65px;
+    padding: 3px 30px;
     /* margin-left: 90px; */
     color: beige;
     text-decoration: none;
