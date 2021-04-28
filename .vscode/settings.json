@@ -1,0 +1,24 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MySQLConnect",
+            "database": "cs371spring2021",
+            "username": "root",
+            "password": ""
+        }
+    ],
+    "liveServer.settings.useWebExt": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.proxy": {
+    "enable": true,
+    "baseUri": "/",
+    "proxyUri": "http://127.0.0.1/CS371_2A_NoCoffee_NoSQL/"
+  }
+}

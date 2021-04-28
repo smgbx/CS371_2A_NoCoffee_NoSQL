@@ -17,7 +17,7 @@
 }
 .container {
     text-align: center;
-    background-color: rgb(77, 150, 214);
+    /* background-color: rgb(77, 150, 214); */
     display: block;
     height: 100%;
     margin-left: auto;
@@ -50,7 +50,7 @@
 
 .button-wrapper2 {
     border-radius: 50px;
-    background-color: rgb(7, 81, 110);
+    /* background-color: rgb(7, 81, 110); */
     margin-top: 30px;
     padding: 3px 65px;
     /* margin-left: 90px; */
