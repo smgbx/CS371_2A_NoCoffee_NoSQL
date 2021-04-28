@@ -1,12 +1,21 @@
-body {
+.container-wrapper{
+    background-color: rgba(250, 235, 215, 0.424);
     width: 80%;
     height: 100%;
     align-items: center;
     display: block;
     justify-content: center;
 }
-.container-wrapper{
-    background-color: rgba(250, 235, 215, 0.424);
+
+.container {
+    text-align: center;
+    /* background-color: rgb(77, 150, 214); */
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
 }
 
 .button-wrapper {

@@ -60,12 +60,9 @@ $user_id = $_SESSION["user_id"];
                 <label class="boxes">
                     Date: <?php echo date("m-d-Y");?>
                 </label><br>
-
-            <div>
-                <input class="button-wrapper2" type="submit" value="SUBMIT">
-            </div>
+                <button class="button-wrapper2"><a href="homepage.php">Back to homepage</a></button>
             </form>
-            <button class="button-wrapper2"><a href="homepage.php">Back to homepage</a></button>
+            
     </div>
 </body>
 </html>
